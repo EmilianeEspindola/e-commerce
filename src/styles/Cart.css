@@ -1,0 +1,248 @@
+.cart-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.cart-container h2{
+    color: var(--fontcolorlight);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.cart-content{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.cart-products{
+    flex: 2;
+}
+
+.cart-products-header{
+    display: flex;
+    justify-content: space-between;
+    color: var(--fontcolorlight);
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--mediumgray);
+    padding-bottom: .65rem;
+    text-transform: uppercase;
+}
+
+.cart-product-item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--lightgray);
+    padding: 1rem 0;
+}
+    
+.cart-product-item img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+  
+.cart-product-infos {
+    width: 100%;
+    margin-left: 1.2rem;
+}
+
+.cart-product-infos h4 {
+    color: var(--fontcolor);
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.cart-item-qty {
+    margin-top: .5rem;
+    display: flex;
+    gap: .6rem;
+}
+
+.cart-item-qty input {
+    width: 50px;
+    text-align: right;
+    padding: .2rem;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: .9rem;
+    cursor: pointer;
+    color: var(--fontcolorlight);
+}
+
+.cart-product-price{
+    color: var(--fontcolor);
+    font-size: .95rem;
+}
+
+.cart-resume{
+    flex: 1;
+}
+
+.cart-resume h3{
+    color: var(--fontcolorlight);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: .65rem;
+}
+
+.cart-resume-content{
+    background-color: var(--lightgray);
+    border-radius: .25rem;
+    padding: 1rem;
+    color: var(--fontcolor);
+    font-size: .95rem;
+}
+
+.resume-subtotal, .resume-total, .resume-frete{
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0;
+}
+
+.resume-frete{
+    font-size: .85rem;
+
+}
+
+.cep{
+    margin: 1rem 0;
+}
+
+.cep-input{
+    display: flex;
+    gap: .5rem;
+    margin-top: .35rem;
+}
+
+.cep label{
+    font-size: .85rem;
+}
+
+.cep-input input{
+    flex: 1;
+    padding: .3rem;
+}
+
+.ok-btn{
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+    padding: .3rem .6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cep-help{
+    font-size: .75rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--fontcolorlight);
+    margin-top: .3rem;
+    margin-left: 2.2rem;
+}
+
+.resume-total{
+    color: var(--fontcolor);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.buy-btn{
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+    width: 100%;
+    padding: .6rem;
+    font-weight: 500;
+    margin-top: .25rem;
+    text-transform: uppercase; 
+}
+
+/* Telas Médias */
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .cart-container{
+        padding: 1.5rem;
+    }
+
+    .cart-container h2{
+        font-size: 1.35rem;
+    }
+
+    .cart-content{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .cart-product-item img{
+        width: 75px;
+        height: 75px;
+    }
+}
+
+/* Telas Pequenas */
+@media screen and (max-width: 480px) {
+    .cart-container{
+        padding: 1.5rem;
+    }
+
+    .cart-container h2{
+        font-size: 1.2rem;
+    }
+
+    .cart-products-header{
+        font-size: .9rem;
+    }
+
+    .cart-content{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .cart-product-item img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .cart-product-infos{
+        margin-left: .5rem;
+    }
+
+    .cart-product-infos h4{
+        font-size: .85rem;
+    }
+
+    .cart-product-price{
+        font-size: .9rem;
+    }
+
+    .cart-resume h3{
+        font-size: .9rem;
+    }
+
+    .cart-resume-content{
+        font-size: .85rem;
+    }
+
+    .resume-frete{
+        font-size: .82rem;
+    }
+
+    .resume-total{
+        font-size: .95rem;
+    }
+}

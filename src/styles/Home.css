@@ -1,29 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-*{
-  font-family: Roboto, sans-serif;
-}
-
 .banner{
   position: relative;
-  height: 500px;
+  min-height: 55vh;
   background-image: linear-gradient(
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)),
+      rgba(0,0,0,.5),
+      rgba(0,0,0,.5)),
     url(https://emanuelnutri.com/wp-content/uploads/2020/03/chas.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
 }
 
+.banner-content{
+  max-width: 800px;
+}
+
 .banner h1{
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 .banner p{
@@ -32,12 +30,24 @@
 }
 
 .banner button{
-  background-color: #4AB0A4;
+  background-color: var(--maincolor);
   color: white;
-  font-size: .9rem;
+  font-size: 1rem;
   border: none;
-  padding: .75rem;
+  padding: .8rem 1.2rem;
   font-weight: 600;
   border-radius: .3rem;
   cursor: pointer;
+  text-transform: uppercase;
 }
+
+.banner button:hover{
+  background-color: var(--maincolordark);
+}
+
+.division-line-home{
+  border-top: 1px solid #e7e7e7;
+  margin-top: 25px;
+}
+
+/* Responsividade ficou ok! */

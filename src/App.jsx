@@ -1,16 +1,21 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { MainLayout } from './layouts/MainLayout'
 import { Home } from './pages/Home';
+import { Product } from './pages/Product';
+import { Cart } from './pages/Cart';
+import { Login } from './pages/Login';
+import { CreateAccount } from './pages/CreateAccount';
 
-function App() {
+export function App() {
   return (
-    <>
-    <Header />
     <Routes>
-      <Route path="/" element={<Home />}></Route>
+      <Route element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path='/product' element={<Product />} />
+      </Route>
+      <Route path='/login' element={<Login />} />
+      <Route path='/createaccount' element={<CreateAccount />} />
     </Routes>
-    </>
   )
 }
-export default App;

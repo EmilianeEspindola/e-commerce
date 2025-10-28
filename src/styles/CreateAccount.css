@@ -1,0 +1,166 @@
+.account-container{
+    background-color: var(--maincolor);
+    display: flex;
+    justify-content: center;
+}
+
+.account-box{
+    background-color: white;
+    border-radius: .3rem;
+    width: 100%;
+    max-width: 850px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+    margin: 2rem;
+}
+
+.account-box img{
+    display: block;
+    margin: 0 auto 0.5rem; 
+    width: 120px;
+    margin-bottom: .5rem;
+}
+
+.account-box h2{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--fontcolor);
+}
+
+.account-box input, select{
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.account-box label{
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: .2rem;
+    font-weight: 500;
+    color: var(--fontcolor);
+}
+
+.account-box section{
+    background: #f7f5f5;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+    max-width: 60vw;
+    margin: auto;
+}
+
+.account-box legend{
+    font-weight: 600;
+    padding: 0 .5rem;
+    color: var(--fontcolor);
+}
+
+.account-box fieldset{
+    border: 0.1rem solid #ddd;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-fieldset{
+    width: 100%;
+}
+
+.form-group-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem
+}
+
+.form-group-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.radio-group, .checkbox-group{
+    display: flex;
+    gap: 10px;
+}
+
+.radio-group>div, .checkbox-group>div{
+    display: flex;
+    gap: 10px;
+}
+
+.radio-group label, .checkbox-group label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.account-box button{
+    width: 100%;
+    padding: .5rem;
+    border-radius: .25rem;
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.account-box input[type="checkbox"],input[type="radio"]{
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.input-senha{
+    position: relative;
+}
+
+.input-senha i{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    cursor: pointer;
+    color: #666;
+}
+
+
+.password-icon{
+    position: absolute;
+    right: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+    color: var(--fontcolor);
+    cursor: pointer;
+}
+
+/*Telas Médias*/
+@media (min-width: 600px) and (max-width: 992px){
+    section{
+        max-width: 80vw;
+    }
+
+    .form-group-3{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*Telas Pequenas*/
+@media (max-width: 600px){
+    section{
+        max-width: 95vw;
+    }
+
+    .checkbox-group{
+        margin-bottom: 1rem; 
+    }
+
+
+    .form-group-2, .form-group-3{
+        grid-template-columns: 1fr;
+    }
+}

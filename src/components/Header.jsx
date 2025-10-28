@@ -3,31 +3,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import '../styles/Header.css';
 
-function Header(){
+export function Header(){
     return(
-        <nav className="bg-maincolor nav">
+        <header className="header">
             <div className="logo">
                 <Link to="/">
                     <img src="/img/logo-branca.png" alt="Logo Tea Bloom" title="Logo Tea Blooom"/>
                 </Link>
             </div>
-            <div className="menu">
+            <nav className="main-menu">
                 <ul>
-                    <li><a href="#">Chás</a></li>
-                    <li><a href="#">Infusões</a></li>
-                    <li><a href="#">Acessórios</a></li>
-                    <li><a href="#">Lançamentos</a></li>
-                    <li><a href="#">Ofertas</a></li>
+                    <li><Link to="/product">Chás</Link></li>
+                    <li><Link to="/product">Infusões</Link></li>
+                    <li><Link to="/product">Acessórios</Link></li>
+                    <li><Link to="/product">Lançamentos</Link></li>
+                    <li><Link to="/product">Ofertas</Link></li>
                 </ul>
-            </div>
-            <div className="menu">
+            </nav>
+            <div className="menu-right">
                 <ul>
                     <li><a href="#"><FontAwesomeIcon icon={faMagnifyingGlass}/></a></li>
-                    <li><a href="#"><FontAwesomeIcon icon={faUser}/></a></li>
-                    <li><a href="#"><FontAwesomeIcon icon={faCartShopping}/></a></li>
+                    <li><Link to="/login"><FontAwesomeIcon icon={faUser}/></Link></li>
+                    <li><Link to="/cart"><FontAwesomeIcon icon={faCartShopping} /></Link></li>
                 </ul>
             </div>
-        </nav>
+        </header>
     )
 }
-export default Header;

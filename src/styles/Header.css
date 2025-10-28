@@ -1,40 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-}
-
-:root{
-  --maincolor: #4AB0A4;
-}
-
-.nav{
+.header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 .5rem;
-}
-
-.bg-maincolor{
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
   background-color: var(--maincolor);
-  align-items: center;
 }
 
 .logo img{
-  width: 7.5rem;
+  width: auto;
   height: 5rem;
-  padding: .3rem;
+  object-fit: contain;
 }
 
-.menu li{
-  display: inline;
-  padding: .5rem;
+.main-menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  font-size: 1.1rem;
 }
 
-.menu a{
-  color: #FFFFFF;
+.menu-right ul{
+  display: flex;
+  gap: .5rem;
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.main-menu a, .menu-right a{
+  color: white;
   text-decoration: none;
+}
+
+/* Telas Médias */
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .main-menu ul {
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .menu-right ul{
+      font-size: .9rem;
+    }
+
+  .logo img {
+    height: 4rem;
+  }
+}
+
+/* Telas Pequenas */
+@media screen and (max-width: 480px) {
+    .main-menu {
+      display: none;
+    }
+
+    .logo img {
+      height: 4rem;
+    }
 }

@@ -1,0 +1,79 @@
+.newsletter{
+    background-color: var(--lightgray);
+    padding: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.newsletter-text{
+    flex: 1 1 300px;
+}
+
+.newsletter-form{
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    flex-wrap: wrap;
+
+}
+
+.newsletter-form input{
+    flex: 1 1 auto;
+    border: .1rem solid var(--mediumgray);
+    border-radius: .2rem;
+    font-size: .75rem;
+    padding: .65rem;
+}
+
+.newsletter-form input:focus{
+  outline: .1rem solid var(--maincolor);
+}
+
+.newsletter-form button{
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    padding: .62rem .9rem;
+    border-radius: .2rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--maincolordark);
+}
+
+.newsletter h2{
+    font-size: 1.1rem;
+    color: var(--maincolor);
+    margin-bottom: .8rem;
+}
+
+.newsletter p{
+    font-size: .8rem;
+    color: var(--fontcolorlight);
+    text-align: justify;
+}
+
+.sr-only{
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+/* Telas Médias */
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .newsletter{
+        padding: 3rem;
+    }
+}
+
+/* Telas Pequenas */
+@media screen and (max-width: 480px) {
+    .newsletter-form button{
+       width: 100%;
+    }
+}

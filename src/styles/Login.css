@@ -1,0 +1,116 @@
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--maincolor);
+}
+
+.login-box{
+    background-color: white;
+    border-radius: .3rem;
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+}
+
+.login-box img{
+    display: block;
+    margin: 0 auto 0.5rem; 
+    width: 120px;
+    margin-bottom: .5rem;
+}
+
+.login-box h2 {
+    color: var(--fontcolor);
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.input-email{
+    margin-bottom: .7rem;
+}
+
+.input-email label, .input-password label {
+    display: block;
+    font-size: .95rem;
+    color: var(--fontcolor);
+    margin-bottom: .2rem;
+}
+
+.input-email input, .input-password input {
+    width: 100%;
+    padding: .35rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    font-size: .9rem;
+}
+
+.input-password a {
+    color: var(--fontcolor);
+    font-size: .8rem;
+}
+
+.password-input-eye{
+    position: relative;
+}
+
+.password-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--fontcolor);
+    cursor: pointer;
+}
+
+.btn{
+    width: 100%;
+    padding: .5rem;
+    border-radius: .25rem;
+    background-color: var(--maincolor);
+    color: white;
+    border: none;
+    margin-top: .8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.remember{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    margin-top: .6rem;
+    font-size: .8rem;
+    color: var(--fontcolor);
+}
+
+.division-line-login{
+    margin: 1rem 0;
+}
+
+.create-account{
+    font-size: .8rem;
+    color: var(--fontcolor);
+    margin-bottom: .3rem;
+}
+
+/* Telas Pequenas */
+@media screen and (max-width: 480px) {
+    .login-container {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .login-box {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .login-box img {
+        width: 100px;
+    }
+
+}
