@@ -11,7 +11,9 @@ export function CreateAccount(){
         <>
         <div className="account-container">
             <div className="account-box">
-                <Link to="/"><img src="/img/logo-cinza.png"alt="Logo Tea Bloom" className="login-logo"></img></Link>
+                <Link to="/">
+                    <img src="/img/logo-cinza.png" alt="Tea Bloom" className="login-logo"></img>
+                </Link>
                 <h2>Criar Conta</h2>
                 <form action="" method="post">
                     <fieldset className="form-fieldset">

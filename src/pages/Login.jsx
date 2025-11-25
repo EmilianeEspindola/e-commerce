@@ -9,7 +9,9 @@ export function Login(){
     return(
         <div className="login-container">
             <div className="login-box">
-                <Link to="/"><img src="/img/logo-cinza.png" alt="Logo Tea Bloom" title="Logo Tea Bloom" className="login-logo"></img></Link>
+                <Link to="/">
+                    <img src="/img/logo-cinza.png" alt="Tea Bloom" className="login-logo"></img>
+                </Link>
                 <h2>Login</h2>
 
                 <form action="" method="post">

@@ -12,7 +12,7 @@ export function App() {
       <Route element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path='/product' element={<Product />} />
+        <Route path='/product/:id' element={<Product />} />
       </Route>
       <Route path='/login' element={<Login />} />
       <Route path='/createaccount' element={<CreateAccount />} />

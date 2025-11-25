@@ -8,13 +8,6 @@ export const reviews = [
     },
     {
         id: 2,
-        title: "Chás muito saborosos!",
-        message: "Recebi os chás em dois dias, possuem um aroma muito bom e são deliciosos!",
-        people: "Juliana Fontana",
-        address: "São José dos Pinhais - PR"
-    },
-    {
-        id: 3,
         title: "Muito bom!",
         message: "Veio tudo certo conforme o pedido e gostei dos chás.",
         people: "José Batista",

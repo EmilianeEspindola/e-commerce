@@ -1,16 +1,24 @@
 .header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding: 0.5rem 1rem;
   background-color: var(--maincolor);
+  gap: 1rem;
 }
 
 .logo img{
-  width: auto;
   height: 5rem;
-  object-fit: contain;
+  display: block;
+}
+
+.main-menu{
+  flex: 0 0 auto;
 }
 
 .main-menu ul{
@@ -21,9 +29,45 @@
   font-size: 1.1rem;
 }
 
+.search-bar{
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.search-bar input{
+  width: 220px;
+  padding: .5rem .65rem;
+  border-radius: .25rem;
+  border: 1px solid var(--lightgray);
+}
+
+.search-bar input:focus{
+  outline: 1px solid var(--buttoncolordark);
+}
+
+.search-bar button{
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.search-bar button:hover{
+  color: var(--buttoncolordark);
+}
+
+.menu-right{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .menu-right ul{
   display: flex;
-  gap: .5rem;
+  align-items: center;
+  gap: .8rem;
   list-style: none;
   font-size: 1.1rem;
 }
@@ -33,20 +77,28 @@
   text-decoration: none;
 }
 
+.main-menu a:hover, .menu-right a:hover{
+  color: var(--buttoncolordark);
+}
+
 /* Telas Médias */
 @media screen and (min-width: 480px) and (max-width: 768px){
+    .logo img{
+      height: 4rem;
+    }
+  
     .main-menu ul {
       gap: 1rem;
       font-size: 0.9rem;
     }
 
+    .search-bar input{
+      width: 160px;
+    }
+
     .menu-right ul{
       font-size: .9rem;
     }
-
-  .logo img {
-    height: 4rem;
-  }
 }
 
 /* Telas Pequenas */
@@ -57,5 +109,9 @@
 
     .logo img {
       height: 4rem;
+    }
+
+    .search-bar input{
+      width: 160px;
     }
 }

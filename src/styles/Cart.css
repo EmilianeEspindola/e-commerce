@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding: 2rem;
+    padding-top: 7.2rem;
 }
 
 .cart-container h2{
@@ -134,7 +135,7 @@
 }
 
 .ok-btn{
-    background-color: var(--maincolor);
+    background-color: var(--buttoncolor);
     color: white;
     border: none;
     border-radius: .2rem;
@@ -142,6 +143,10 @@
     padding: .3rem .6rem;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.ok-btn:hover{
+    background-color: var(--buttoncolordark);
 }
 
 .cep-help{
@@ -161,7 +166,7 @@
 }
 
 .buy-btn{
-    background-color: var(--maincolor);
+    background-color: var(--buttoncolor);
     color: white;
     border: none;
     border-radius: .2rem;
@@ -171,6 +176,10 @@
     font-weight: 500;
     margin-top: .25rem;
     text-transform: uppercase; 
+}
+
+.buy-btn:hover{
+    background-color: var(--buttoncolordark);
 }
 
 /* Telas Médias */

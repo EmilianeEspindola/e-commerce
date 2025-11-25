@@ -11,8 +11,10 @@ export function Home() {
             <div className="banner">
                 <div className="banner-content">
                     <h1>Lançamentos</h1>
-                    <p>Novos sabores para melhorar o seu dia!</p>
-                    <button className="banner-button">Descubra</button>
+                    <p>Confira os lançamentos do mês!</p>
+                    <p>São novos sabores de chás e infusões para melhorar o seu dia!</p>
+                    <p>Além de novos acessórios para deixar sua experiência ainda mais completa!</p>
+                    <button className="banner-button">Conferir</button>
                 </div>
             </div>
             <div>

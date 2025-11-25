@@ -1,3 +1,4 @@
+import { useCart } from "../hooks/useCart";
 import { useImageChanger } from "../hooks/useImageChanger"
 import { useTabs } from "../hooks/useTabs"
 import { ProductSession } from "../components/ProductSession";
@@ -54,13 +55,27 @@ function ProductImages({ images }){
 }
 
 function ProductInfo({ product }) {
+    const { addToCart } = useCart();
+
+    const finalPrice = product.onSale ? product.discountPrice : product.price;
+
+    function handleAdd() {
+        addToCart({
+            id: product.id,
+            name: product.name,
+            img: product.images[0],
+            price: finalPrice,
+            quantity: 1
+        })
+    }
+
     return (
         <div className="product-info">
             <h2>{product.name}</h2>
             <p>{product.details}</p>
-            <h3>R${product.price.toFixed(2).replace('.',',')}</h3>
+            <h3>R${finalPrice.toFixed(2).replace('.',',')}</h3>
             <div className="buttons">
-                <button>Adicionar ao Carrinho</button>
+                <button onClick={handleAdd}>Adicionar ao Carrinho</button>
                 <button>Comprar Agora</button>
             </div>
         </div>

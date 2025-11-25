@@ -38,6 +38,10 @@
     color: white;
 }
 
+.footer a:hover{
+    text-decoration: underline;
+}
+
 .footer-social ul {
   display: flex;
   gap: 1rem;
@@ -47,13 +51,29 @@
     font-size: 1.1rem;
 }
 
+.footer-social a:hover {
+    color: var(--buttoncolordark);
+}
+
 .footer-two{
     width: 100%;
     background-color: var(--maincolordark);
     color: white;
-    text-align: center;
-    font-size: .65rem;
-    padding: .85rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: .7rem;
+    padding: .85rem 2rem;
+}
+
+.footer-payment ul{
+    display: flex;
+    gap: .5rem;
+}
+
+.footer-payment li{
+    font-size: 1.2rem;
 }
 
 /* Telas Médias e Pequenas*/

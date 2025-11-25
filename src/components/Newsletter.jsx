@@ -7,9 +7,9 @@ export function Newsletter(){
                 <h2>Receba promoções e novidades</h2>
                 <p>Informe seu e-mail para cadastrar-se e receber nossas novidades e promoções em primeira mão!</p>
             </div>
-            <form action="" method="" className="newsletter-form">
+            <form className="newsletter-form">
                 <label htmlFor="newsletter-email" className="sr-only">E-mail</label>
-                <input type="email" id="newsletter-email" name="newsletter-email" placeholder="E-mail" required/>
+                <input type="email" id="newsletter-email" name="newsletter-email" placeholder="E-mail"/>
                 <button type="submit">Inscrever-se</button>
             </form>
         </div>

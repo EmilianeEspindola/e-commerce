@@ -32,7 +32,7 @@
 }
 
 .newsletter-form button{
-    background-color: var(--maincolor);
+    background-color: var(--buttoncolor);
     color: white;
     border: none;
     padding: .62rem .9rem;
@@ -44,7 +44,7 @@
 }
 
 .newsletter-form button:hover {
-  background-color: var(--maincolordark);
+  background-color: var(--buttoncolordark);
 }
 
 .newsletter h2{

@@ -1,3 +1,4 @@
+import { useCart } from '../hooks/useCart';
 import '../styles/ProductSession.css';
 
 export function ProductSession({title, button, products}){
@@ -8,16 +9,8 @@ export function ProductSession({title, button, products}){
             <div className="product-list">
                 {products.map((product, index)=>(
                     <ProductCard
-                        key={index}
-                        img={product.img}
-                        imgAlt={product.imgAlt}
-                        imgTitle={product.imgTitle}
-                        name={product.name}
-                        smallDescription={product.smallDescription}
-                        price={product.price}
-                        discountPrice={product.discountPrice}
-                        onSale={product.onSale}
-                        valueSale={product.valueSale}
+                        key={product.id}
+                        {...product}
                     />
                 ))}
             </div>
@@ -29,7 +22,15 @@ export function ProductSession({title, button, products}){
     )
 }
 
-function ProductCard({img, imgAlt, imgTitle, name, smallDescription, price, discountPrice, onSale, valueSale}){
+function ProductCard({ id, img, imgAlt, imgTitle, name, smallDescription, price, discountPrice, onSale, valueSale }) {
+    const { addToCart } = useCart();
+
+    const finalPrice = onSale ? discountPrice : price;
+
+    function handleAdd() {
+        addToCart({ id, img, imgAlt, imgTitle, name, smallDescription, price, discountPrice, onSale, valueSale, quantity: 1 });
+    }
+    
     return(
         <div className={`product-card ${onSale ? 'on-sale' : ''}`}>
             {onSale && <span className="sale">{valueSale}</span>}
@@ -43,16 +44,16 @@ function ProductCard({img, imgAlt, imgTitle, name, smallDescription, price, disc
                 {onSale ? (
                     <>
                     <div className="price-container">
-                        <h3 className="old-price">{price}</h3>
-                        <h3 className="new-price">{discountPrice}</h3>
+                        <h3 className="old-price">R${price}</h3>
+                        <h3 className="new-price">R${discountPrice}</h3>
                     </div>
                     </>
                 ) : (
-                    <h3 className="product-price">{price}</h3>
+                    <h3 className="product-price">R${price}</h3>
                 )}
             </div>
 
-            <button className="product-button">Adicionar ao Carrinho</button>
+            <button className="product-button" onClick={handleAdd}>Adicionar ao Carrinho</button>
         </div>
     )
 }

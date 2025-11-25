@@ -8,8 +8,10 @@
 }
 
 :root{
-  --maincolor: #4AB0A4;
-  --maincolordark: #3D988D;
+  --maincolor: #45a59a;
+  --maincolordark: #28756c;
+  --buttoncolor: #1b6960;
+  --buttoncolordark: #16574f;
   --fontcolor: #444;
   --fontcolorlight: #757575;
   --lightgray: #eeeeee;

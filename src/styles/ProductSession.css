@@ -79,7 +79,7 @@
 }
 
 .product-button{
-  background-color: var(--maincolor);
+  background-color: var(--buttoncolor);
   color: white;
   border: none;
   padding: .6rem .6rem;
@@ -91,7 +91,7 @@
 }
 
 .product-button:hover{
-  background-color: var(--maincolordark);
+  background-color: var(--buttoncolordark);
 }
 
 .class-button{
@@ -100,7 +100,7 @@
 }
 
 .session-button{
-  background-color: var(--maincolor);
+  background-color: var(--buttoncolor);
   color: white;
   border: none;
   padding: .6rem 1rem;
@@ -111,7 +111,7 @@
 }
 
 .session-button:hover{
-  background-color: var(--maincolordark);
+  background-color: var(--buttoncolordark);
 }
 
 .sale{

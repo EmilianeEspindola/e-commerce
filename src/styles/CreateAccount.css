@@ -102,12 +102,16 @@
     width: 100%;
     padding: .5rem;
     border-radius: .25rem;
-    background-color: var(--maincolor);
+    background-color: var(--buttoncolor);
     color: white;
     border: none;
     text-transform: uppercase;
     font-weight: 600;
     cursor: pointer;
+}
+
+.account-box button:hover{
+    background-color: var(--buttoncolordark);
 }
 
 .account-box input[type="checkbox"],input[type="radio"]{
